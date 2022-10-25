@@ -4,7 +4,11 @@
 let containerEl = document.getElementById("container");
 
 // Global Variable
-let myData = [400, 500, 250, 550, 100, 300, 600];
+let myData = [];
+for (let n = 1; n <= 50; n++) {
+    myData.push(Math.random() * 600);
+}
+console.log(myData);
 
 // Display Data
 drawArray();
@@ -12,7 +16,7 @@ drawArray();
 function drawArray() {
     let outputStr = "";
     for (let i = 0; i < myData.length; i++) {
-        outputStr += `<div style="height: ${myData[i]}px">${myData[i]}</idv>`
+        outputStr += `<div style="height:${myData[i]}px"></div>`
     }
     containerEl.innerHTML = outputStr;
 }
